@@ -18,3 +18,6 @@ skip in packageJSDependencies := false
 // uTest settings
 libraryDependencies += "com.lihaoyi" %%% "utest" % "0.2.5-RC1" % "test"
 testFrameworks += new TestFramework("utest.runner.Framework")
+
+persistLauncher in Compile := true
+persistLauncher in Test := false
