@@ -5,4 +5,10 @@ name := "Scala.js Tutorial"
 
 scalaVersion := "2.11.5"
 
-libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.7.0"
+resolvers += Resolver.url("scala-js-releases",
+    url("http://dl.bintray.com/scala-js/scala-js-releases/"))(
+    Resolver.ivyStylePatterns)
+
+libraryDependencies += "be.doeraene" %%% "scalajs-jquery" % "0.7.0"
+
+skip in packageJSDependencies := false
