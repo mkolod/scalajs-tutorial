@@ -11,4 +11,10 @@ resolvers += Resolver.url("scala-js-releases",
 
 libraryDependencies += "be.doeraene" %%% "scalajs-jquery" % "0.7.0"
 
+jsDependencies += RuntimeDOM
+
 skip in packageJSDependencies := false
+
+// uTest settings
+libraryDependencies += "com.lihaoyi" %%% "utest" % "0.2.5-RC1" % "test"
+testFrameworks += new TestFramework("utest.runner.Framework")
